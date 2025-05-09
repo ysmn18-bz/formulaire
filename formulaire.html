@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9fc;
+          padding: 20px;
+        }
+      
+        h1 {
+          color: #2c3e50;
+          text-align: center;
+        }
+      
+        form {
+          max-width: 600px;
+          margin: auto;
+          background-color: #ffffff;
+          padding: 25px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        fieldset {
+          border: 1px solid #cccccc;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: #f0f4f8;
+          margin-bottom: 20px;
+        }
+      
+        legend {
+          font-weight: bold;
+          font-size: 18px;
+          color: #2980b9;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 6px;
+          font-weight: bold;
+          color: #34495e;
+        }
+      
+        input, select {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          background-color: #ffffff;
+        }
+      
+        input[type="file"] {
+          padding: 5px;
+        }
+      
+        input[type="submit"], input[type="reset"] {
+          width: auto;
+          padding: 10px 20px;
+          margin-right: 10px;
+          background-color: #3498db;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      
+        input[type="submit"]:hover, input[type="reset"]:hover {
+          background-color: #2980b9;
+        }
+      </style>
+      
+</head>
+<body>
+    <h1>Mon premier formulaire HTML5</h1>
+    <from name="formulaire" method="POST" action="destination.html">
+        <fieldset>
+            <legend>Vos Coordonnées</legend>
+            <label for="prénom">Votre prénom:</label>
+            <input type="text" name ="prénom" id="prénom" placeholder="tapez votre prénom" size="30" maxlength="20"><br><br>
+            <label for="Nom">Votre Nom:</label>
+            <input type="text" name="Nom" id="Nom" placeholder="tapez votre nom" size="30" maxlength="20"><br><br>
+            <label for="nemtel">Numéro de téléphone:</label>
+            <input type="tel" name="numtel" id="numtel" placeholder="tapez votre numéro de téléphone" size="30" maxlength="20"><br><br>
+            <label for="datnais">Votre date de naissance</label>
+            <input type="date" name="datnais" id="datnais" value="jj/mm/aaaa" required="" /><br><br>
+            <label for="age">Votre Age</label>
+            <input type="number" name="age" id="age" placeholder="Tapez votre age"><br><br>
+            <label for="email">Votre email</label>
+            <input type="email" name="email" id="email" placeholder="Tapez votre E-mail" size="40" maxlength="35"><br><br>
+            <label for="mp">Votre mot de passe</label>
+            <input type="password" name="mp" id="mp" placeholder="Tapez votre mot de passe" size="30" maxlength="20"><br><br>
+            <label for="sw">Votre site Web</label>
+            <input type="url" name="sw" id="sw" placeholder=" Tapez votre site web" size="30" maxlength="20"><br><br>
+            <label for="pays">Dans quel pays habitez-vous?</label><br>
+            <select name="pays" id="pays">
+                <option disabled="votre pays" selected="">Votre pays</option>
+                <optgroup label="Europe">
+                    <option>France</option>
+                    <option>italie</option>
+                    <option>Allemagne</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option>USA</option>
+                    <option>Canada</option>
+                    <option>Argentine</option>
+                    <option>Méxique</option>
+                </optgroup>
+                <optgroup label="Autres">
+                    <option>Afrique</option>
+                    <option>Asie</option>
+                    <option>Océanie</option>
+                    <option>Australie</option>
+                </optgroup>
+            </select>
+        </fieldset><br/><br/>
+        <fieldset>
+            <label for="phot">Votre photo</label>
+            <input type="button" value="Choisir in fichier" /><br/><br/>
+            <input type="button" value="Effacer" />
+            <input type="button" value="Envoyer" />
+        </fieldset>
+    </from>
+    
+</body>
+</html>
